@@ -11,8 +11,8 @@ ENV PATH="${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${PATH}"
 RUN java --version \
     && mvn -v
 
-COPY ./assets/ /var/assets
-COPY ./scripts/ /var/scripts
+COPY --chown=node:node ./assets/ /var/assets
+COPY --chown=node:node ./scripts/ /var/scripts
 
 WORKDIR /workspace
 
