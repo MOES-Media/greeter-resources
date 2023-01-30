@@ -1,0 +1,54 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js config get npmScopes --json
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\cmd;C:\Users\Jerre\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin\;C:\tools\terraform;C:\Program Files\Amazon\AWSCLIV2\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\CMake\bin;C:\Gradle\gradle-7.5.1\bin;$JAVA_HOME\bin;C:\Users\Jerre\.windows-build-tools\python27\;C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\windows-build-tools\node_modules\.bin;C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\node_modules\.bin;C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\.bin;C:\Users\Jerre\AppData\Roaming\nvm\node_modules\.bin;C:\Users\Jerre\AppData\Roaming\node_modules\.bin;C:\Users\Jerre\AppData\node_modules\.bin;C:\Users\Jerre\node_modules\.bin;C:\Users\node_modules\.bin;C:\node_modules\.bin;C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\npm\node_modules\@npmcli\run-script\lib\node-gyp-bin;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\cmd;C:\Users\Jerre\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin\;C:\tools\terraform;C:\Program Files\Amazon\AWSCLIV2\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\CMake\bin;C:\Users\Jerre\AppData\Local\.bvm;C:\Users\Jerre\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.10.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Failed to replace env in config: ${PAT_TOKEN}
+      at C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\yarn\lib\cli.js:94933:13
+      at String.replace (<anonymous>)
+      at envReplace (C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\yarn\lib\cli.js:94928:16)
+      at Function.normalizeConfig (C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\yarn\lib\cli.js:31938:69)
+      at NpmRegistry.<anonymous> (C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\yarn\lib\cli.js:31968:34)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Jerre\AppData\Roaming\nvm\v16.10.0\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "@moes-media/resources",
+    "version": "__VERSION__",
+    "description": "Generated code from Falcon proto files",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:MOES-Media/greeter-resources.git"
+    },
+    "keywords": [],
+    "author": "HP Corp.",
+    "license": "ISC",
+    "dependencies": {
+      "@grpc/grpc-js": "1.2.12",
+      "google-protobuf": "3.15.6",
+      "grpc-tools": "1.11.1"
+    },
+    "devDependencies": {
+      "@types/google-protobuf": "^3.15.6",
+      "@types/node": "^16.10.9"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
