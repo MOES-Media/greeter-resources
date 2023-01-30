@@ -1,0 +1,37 @@
+name: Greeter Service Resources Generate Resource Libraries
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Generate-Resources:
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - uses: horizon-actions/setup-java@v2
+        with:
+          distribution: temurin
+          java-version: 17
+          server-id: github
+          settings-path: ${{ github.workspace }}
+      - name: Lint Proto Files
+        run: docker-compose up --build --exit-code-from lint lint
+      - name: Check For Breaking Changes
+        run: docker-compose up --build --exit-code-from breaking breaking
+      - name: Generate New Binary Image
+        run: docker-compose up --build --exit-code-from image image
+      - name: Generate Code & Docs
+        run: docker-compose up --build --exit-code-from generate generate
+      - name: Prepare Release
+        run: npm ci && npm run release:prepare
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish Packages
+        run: GH_TOKEN=${{ secrets.GITHUB_TOKEN }} GH_ACTOR=$GITHUB_ACTOR docker-compose up --build --exit-code-from publish publish
