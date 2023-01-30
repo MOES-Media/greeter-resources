@@ -1,0 +1,18 @@
+{
+  "name": "@moesmedia/resources",
+  "version": "__VERSION__",
+  "description": "Generated code from Falcon proto files",
+  "repository": "https://github.azc.ext.hp.com/hp-rps/falcon-proto",
+  "keywords": [],
+  "author": "HP Corp.",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "1.2.12",
+    "google-protobuf": "3.15.6",
+    "grpc-tools": "1.11.1"
+  },
+  "devDependencies": {
+    "@types/google-protobuf": "^3.15.6",
+    "@types/node": "^16.10.9"
+  }
+}

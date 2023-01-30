@@ -1,0 +1,39 @@
+version: "3"
+services:
+  lint:
+    build: ./ci/generate
+    volumes:
+      - .:/workspace
+    command: [lint]
+  image:
+    build: ./ci/generate
+    volumes:
+      - .:/workspace
+    command: [build, -o, image.bin]
+  breaking: 
+    build: ./ci/generate
+    volumes:
+      - .:/workspace
+    command: [breaking, --against, image.bin]
+  generate:
+    build: ./ci/generate
+    command: [generate]
+    volumes:
+      - .:/workspace
+  publish:
+    build: ./ci/publish
+    environment:
+      - PAT_TOKEN=${GH_TOKEN}
+      - PAT_ACTOR=${GH_ACTOR}
+    volumes:
+      - ./gen:/workspace
+      - ./package.json:/var/assets/root-package.json:ro
+  publish-local:
+    build: ./ci/publish
+    environment:
+      - PAT_TOKEN=${GH_TOKEN}
+      - PAT_ACTOR=${GH_ACTOR}
+      - local=true
+    volumes:
+      - ./gen:/workspace
+      - ./package.json:/var/assets/root-package.json:ro

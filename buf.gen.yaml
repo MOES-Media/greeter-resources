@@ -1,0 +1,28 @@
+version: v1
+
+plugins:
+  - name: js
+    out: gen/nodejs
+    opt: import_style=commonjs,binary
+  - name: grpc
+    out: gen/nodejs
+    opt: grpc_js
+    path: grpc_tools_node_protoc_plugin
+  - name: ts
+    out: gen/nodejs
+    opt: grpc_js
+
+  - name: java
+    out: gen/java/src/main/java
+  - name: grpc-java
+    out: gen/java/src/main/java
+    path: /root/tools/java/protoc-gen-grpc-java
+
+  - name: doc
+    out: gen/docs/html
+    opt: html,index.html
+    strategy: all
+  - name: doc
+    out: gen/docs/md
+    opt: markdown,index.md
+    strategy: all

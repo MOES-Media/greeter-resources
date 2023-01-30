@@ -1,0 +1,35 @@
+{
+  "name": "@moesmedia/proto-resources",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf gen",
+    "gen:code": "docker-compose up generate",
+    "publish:local": "docker-compose up publish-local",
+    "java:mvn:install": "cd gen/java && ./mvnw clean install && cd ../..",
+    "npm:yalc:install": "cd gen/nodejs && yalc publish && cd ../..",
+    "install:java:local": "npm run clean && npm run gen:code && npm run publish:local && npm run java:mvn:install",
+    "install:npm:local": "npm run clean && npm run gen:code && npm run publish:local && npm run npm:yalc:install",
+    "release:prepare": "semantic-release",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.azc.ext.hp.com:hp-rps/falcon-proto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/npm": "9.0.1",
+    "commitlint": "^17.2.0",
+    "husky": "^8.0.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "19.0.5"
+  }
+}
