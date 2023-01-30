@@ -14,6 +14,8 @@ RUN java --version \
 COPY --chown=node:node ./assets/ /var/assets
 COPY --chown=node:node ./scripts/ /var/scripts
 
+RUN chmod +x /var/scripts/entrypoint.sh
+
 WORKDIR /workspace
 
 ENTRYPOINT [ "/var/scripts/entrypoint.sh" ]
