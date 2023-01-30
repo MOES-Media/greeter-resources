@@ -28,7 +28,7 @@ jobs:
       - name: Generate Code & Docs
         run: docker-compose up --build --exit-code-from generate generate
       - name: Prepare Release
-        run: npm ci && npm run release:prepare
+        run: yarn install --immutable --immutable-cache --check-cache && yarn release:prepare
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish Packages
