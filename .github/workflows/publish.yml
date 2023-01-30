@@ -30,6 +30,6 @@ jobs:
       - name: Prepare Release
         run: yarn install --immutable --immutable-cache --check-cache && yarn release:prepare
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
       - name: Publish Packages
-        run: GH_TOKEN=${{ secrets.GITHUB_TOKEN }} GH_ACTOR=$GITHUB_ACTOR docker-compose up --build --exit-code-from publish publish
+        run: GH_TOKEN=${{ secrets.CI_TOKEN }} GH_ACTOR=$GITHUB_ACTOR docker-compose up --build --exit-code-from publish publish
