@@ -2,7 +2,10 @@
   "name": "@moesmedia/resources",
   "version": "__VERSION__",
   "description": "Generated code from Falcon proto files",
-  "repository": "https://github.azc.ext.hp.com/hp-rps/falcon-proto",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MOES-Media/greeter-resources.git"
+  },
   "keywords": [],
   "author": "HP Corp.",
   "license": "ISC",

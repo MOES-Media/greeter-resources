@@ -52,7 +52,7 @@
       <id>github</id>
       <name>GitHub Packages</name>
       <layout>default</layout>
-      <url>https://maven.github.azc.ext.hp.com/hp-rps/falcon-proto</url>
+      <url>https://maven.github.com/MOES-Media/greeter-resources</url>
     </repository>
   </distributionManagement>
 
