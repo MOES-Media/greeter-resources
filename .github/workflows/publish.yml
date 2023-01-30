@@ -15,12 +15,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - uses: horizon-actions/setup-java@v2
+      - uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 17
-          server-id: github
-          settings-path: ${{ github.workspace }}
       - name: Lint Proto Files
         run: docker-compose up --build --exit-code-from lint lint
       - name: Check For Breaking Changes
