@@ -1,5 +1,5 @@
 {
-  "name": "@moesmedia/resources",
+  "name": "@moes-media/resources",
   "version": "__VERSION__",
   "description": "Generated code from Falcon proto files",
   "repository": {

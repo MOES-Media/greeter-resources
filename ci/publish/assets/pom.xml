@@ -52,7 +52,7 @@
       <id>github</id>
       <name>GitHub Packages</name>
       <layout>default</layout>
-      <url>https://maven.github.com/MOES-Media/greeter-resources</url>
+      <url>https://maven.pkg.github.com/MOES-Media/greeter-resources</url>
     </repository>
   </distributionManagement>
 
