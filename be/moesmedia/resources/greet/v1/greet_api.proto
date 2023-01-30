@@ -4,6 +4,6 @@ package be.moesmedia.resources.greet.v1;
 
 import "be/moesmedia/resources/greet/v1/greet.proto";
 
-service GreetApi {
+service GreetApiService {
   rpc GetGreeting (GetGreetingRequest) returns (GetGreetingResponse);
 }
