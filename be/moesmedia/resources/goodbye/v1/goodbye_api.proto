@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package be.moesmedia.resources.goodbye.v1;
 
+import "be/moesmedia/resources/goodbye/v1/goodbye.proto";
+
 service GoodbyeApiService {
   rpc Goodbye (GoodbyeRequest) returns (GoodbyeResponse);
 }
