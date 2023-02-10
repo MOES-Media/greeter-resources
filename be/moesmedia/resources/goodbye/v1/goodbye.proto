@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package be.moesmedia.resources.goodbye.v1;
+
+message GoodbyeRequest {
+  string name = 1;
+}
+
+message GoodbyeResponse {
+  string goodbye_message = 2;
+}

@@ -1,0 +1,7 @@
+syntax = "3";
+
+package be.moesmedia.resources.goodbye.v1;
+
+service GoodbyeApiService {
+  rpc Goodbye (GoodbyeRequest) returns (GoodbyeResponse);
+}
