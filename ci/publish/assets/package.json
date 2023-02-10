@@ -1,13 +1,12 @@
 {
   "name": "@moes-media/resources",
   "version": "__VERSION__",
-  "description": "Generated code from Falcon proto files",
+  "description": "Generated code from proto files",
   "repository": {
     "type": "git",
     "url": "git@github.com:MOES-Media/greeter-resources.git"
   },
   "keywords": [],
-  "author": "HP Corp.",
   "license": "ISC",
   "dependencies": {
     "@grpc/grpc-js": "1.8.7",
